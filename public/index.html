@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The TechTrendy Swag Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        #user-info {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .products-section,
+        .cart-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+
+        .product-card {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-card:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            background-color: #03dac6;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .btn-checkout {
+            background-color: #6200ea;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .btn-checkout:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        #cart-items li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .total-row {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .discount-section {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>The TechTrendy Swag Store</h1>
+        <div id="user-info">Logged in as: <span id="username">Loading...</span> | Balance: <span id="balance">0</span>
+            pts</div>
+    </header>
+
+    <div class="container">
+        <div class="products-section">
+            <h2>Swag Catalog</h2>
+            <div id="product-list">
+                <!-- Products will be loaded here -->
+                <p>Loading products...</p>
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will appear here -->
+            </ul>
+
+            <div class="discount-section">
+                <input type="text" id="discount-code" placeholder="Enter Discount Code">
+                <button class="btn" onclick="applyDiscount()">Apply</button>
+                <p id="discount-message" style="font-size: 0.9em; margin-top: 5px; min-height: 1.2em;"></p>
+            </div>
+
+            <div class="total-row">
+                Total: <span id="total-price">0</span> pts
+            </div>
+
+            <button id="checkout-btn" class="btn btn-checkout" onclick="checkout()">Checkout</button>
+            <p id="message-area" style="text-align: center; margin-top: 10px; font-weight: bold;"></p>
+        </div>
+    </div>
+
+    <!-- Load shared logic first -->
+    <script src="js/cartLogic.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Premium Hoodie",
+            "price": 100,
+            "image": "hoodie.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Sticky Notes",
+            "price": 5,
+            "image": "notes.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Water Bottle",
+            "price": 30,
+            "image": "bottle.jpg"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "testuser",
+            "balance": 500,
+            "cart": []
+        }
+    ],
+    "cart": []
+}
