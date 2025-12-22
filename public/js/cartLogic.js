@@ -13,7 +13,7 @@ function calculateTotal(cartItems, discountCode) {
     // 3. Return the total as a number with 2 decimal places
 
     // ANSWER BEGIN
-    let total = cartItems.reduce((sum, item) => sum + item.price, 0);
+    let total = cartItems.reduce((sum, item) => sum + (item.price || 0), 0);
 
     // Discount Logic: "KUDOS10" gives 10% discount
     if (discountCode === "KUDOS10") {
