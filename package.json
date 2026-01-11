@@ -7,7 +7,7 @@
         "start:app": "concurrently \"json-server --watch db.json --port 3000\" \"http-server public -p 8080\"",
         "test:unit": "jest tests/unit",
         "test:api": "jest tests/api",
-        "test:bdd": "cucumber-js tests/bdd/features --require tests/bdd/step_definitions/*.js",
+        "test:bdd": "cucumber-js tests/bdd/features --require \"tests/bdd/step_definitions/*.js\"",
         "test:ui": "node tests/ui/selenium_cart.js",
         "test:perf": "k6 run tests/perf/load_test.js",
         "db:reset": "cp db.seed.json db.json"
