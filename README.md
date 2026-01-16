@@ -66,7 +66,5 @@ npm run test:perf
 ## 🎓 Teaching Mode
 This codebase is set up as a **Teaching Repository**. 
 Key files contain `// STUDENT: Implement your solution below` comments where you should write code.
-We have provided working solutions in `// ANSWER BEGIN` ... `// END OF ANSWER` blocks. 
-**Instructors**: You may wish to remove the Answer blocks before distributing to students.
 
 Happy Testing! 🎯

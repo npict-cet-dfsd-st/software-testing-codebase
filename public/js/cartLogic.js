@@ -13,14 +13,7 @@ function calculateTotal(cartItems, discountCode) {
     // 3. Return the total as a number with 2 decimal places
 
     // ANSWER BEGIN
-    let total = cartItems.reduce((sum, item) => sum + (item.price || 0), 0);
-
-    // Discount Logic: "KUDOS10" gives 10% discount
-    if (discountCode === "KUDOS10") {
-        total = total * 0.9;
-    }
-
-    return parseFloat(total.toFixed(2)); // Ensure 2 decimal places
+    return 0;
     // END OF ANSWER
 }
 
@@ -38,10 +31,6 @@ function removeItem(cartItems, itemId) {
     // 3. Return the modified array/new array
 
     // ANSWER BEGIN
-    const index = cartItems.findIndex(item => item.id === itemId);
-    if (index > -1) {
-        cartItems.splice(index, 1);
-    }
     return cartItems;
     // END OF ANSWER
 }
@@ -58,7 +47,7 @@ function isValidDiscount(code) {
     // 2. Return false otherwise
 
     // ANSWER BEGIN
-    return code === "KUDOS10";
+    return false;
     // END OF ANSWER
 }
 

@@ -68,9 +68,7 @@ const assert = require('assert');
         console.log('✅ Final Total Verified: 121.5');
 
         // ANSWER BEGIN
-        const finalTotalText = await totalElement.getText();
-        assert.strictEqual(finalTotalText, '121.5');
-        console.log('🎉 UI Test Fully Passed!');
+
         // END OF ANSWER
 
         await sleep(2000); // Final pause to admire the work

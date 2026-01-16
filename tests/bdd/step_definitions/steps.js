@@ -23,8 +23,6 @@ When('they add "Hoodie" to the cart', function () {
 
 // ANSWER BEGIN
 Then('remaining balance should be {int} points', function (expectedBalance) {
-    const total = calculateTotal(cart);
-    const remaining = userBalance - total;
-    assert.strictEqual(remaining, expectedBalance);
+
 });
 // END OF ANSWER

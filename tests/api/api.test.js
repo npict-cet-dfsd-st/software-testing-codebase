@@ -19,19 +19,7 @@ describe('API Layer Tests', () => {
 
     // ANSWER BEGIN
     test('POST /cart adds an item successfully', async () => {
-        const cartItem = {
-            items: [{ id: 1, name: "Test Item", price: 10 }],
-            total: 10,
-            user: "testuser"
-        };
-
-        const response = await request(API_URL)
-            .post('/cart')
-            .send(cartItem)
-            .set('Content-Type', 'application/json');
-
-        expect(response.status).toBe(201); // Created
-        expect(response.body.user).toBe("testuser");
+        
     });
     // END OF ANSWER
 });
